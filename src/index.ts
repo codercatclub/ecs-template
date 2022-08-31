@@ -10,15 +10,7 @@ import { StandardPrimitiveSystem } from "./systems/core/StandardPrimitiveSystem"
 import { StatsSystem } from "./systems/core/StatsSystem";
 
 (async () => {
-  const assetManager = new AssetManager();
-
-  assetManager
-    .addAsset("assets/models/cameras.glb", "cameras")
-
-  // Wait until all assets are loaded
-  await assetManager.load();
-
-  const world = new World(assetManager.loadedAssets);
+  const world = new World();
 
   const cube = StandardPrimitive({ type: "Box" });
   world.addEntity(cube);
