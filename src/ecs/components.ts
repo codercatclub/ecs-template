@@ -91,34 +91,6 @@ export const MaterialC = {
   },
 };
 
-interface NeuronMaterialCData {
-  shader: string;
-  color: Color | null;
-}
-
-export const NeuronMaterialC: Component<NeuronMaterialCData> = {
-  type: "NeuronMaterialC",
-  data: {
-    shader: "Neuron",
-    color: null,
-  },
-};
-
-export const MuscleMaterialC = {
-  type: "MuscleMaterialC",
-  data: {
-    shader: "Muscle",
-  },
-};
-
-export const SignMaterialC = {
-  type: "SignMaterialC",
-  data: {
-    color: new Color(0xffffff),
-    ignoreReflection: 0
-  },
-};
-
 export const CCMaterialC = {
   type: "CCMaterialC",
   data: {
@@ -171,17 +143,6 @@ export const AudioC: Component<AudioCData> = {
     fadeTime: 0.6,
     loop: false
   },
-};
-
-interface NeuronCoreCData {
-  video: string;
-}
-
-export const NeuronCoreC: Component<NeuronCoreCData> = {
-  type: "NeuronCore",
-  data: {
-    video: ""
-  }
 };
 
 export const EnvSphereC: Component<null> = {
