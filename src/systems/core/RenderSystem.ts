@@ -91,9 +91,7 @@ export const RenderSystem: RenderSystem = {
 
     this.renderer = new THREE.WebGLRenderer({ antialias: !this.bloom.enabled });
 
-    this.renderer.physicallyCorrectLights = true;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.outputEncoding = THREE.sRGBEncoding;
 
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.setAnimationLoop(this.animation);
@@ -134,10 +132,7 @@ export const RenderSystem: RenderSystem = {
       const bokehPass = new BokehPass(this.scene, this.camera, {
         focus: 2.5,
         aperture: 0.0001,
-        maxblur: 0.002,
-
-        width: window.innerWidth,
-        height: window.innerHeight,
+        maxblur: 0.002
       });
 
       if (this.captureMode) {
