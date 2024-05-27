@@ -12,7 +12,7 @@ import { Vector3 } from "three";
 export default async () => {
   const assetManager = new AssetManager();
 
-  assetManager.addAsset("assets/models/suzanne.glb", "suzanne");
+  assetManager.addAsset("assets/models/suzanne.glb");
 
   // Wait until all assets are loaded
   await assetManager.load();

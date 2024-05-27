@@ -16,7 +16,6 @@ export interface LoadedAsset {
 
 export interface Asset {
   type: AssetType;
-  tag: string;
   src: string;
 }
 
@@ -38,7 +37,7 @@ export class AssetManager {
     };
   }
 
-  public addAsset(src: string, tag: string) {
+  public addAsset(src: string) {
     const extension = getFileExtension(src) as AssetType;
 
     if (!isSupported(extension)) {
@@ -46,7 +45,7 @@ export class AssetManager {
       return this;
     }
 
-    this._assets.push({ type: extension, src, tag });
+    this._assets.push({ type: extension, src });
 
     return this;
   }

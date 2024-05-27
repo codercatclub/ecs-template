@@ -90,7 +90,7 @@ export const AssetSystem: AssetSystem = {
     let asset = this.world.assets.objects.get(src);
 
     if (debug) {
-      console.debug("GLTF Model: ", asset);
+      console.debug("Model: ", asset);
     }
 
     if (!asset) {

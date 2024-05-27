@@ -6,6 +6,7 @@ import addEntity from "./addEntities";
 import customShader from "./customShader";
 import multipleShaders from "./multipleShaders";
 import { World } from "../ecs/index";
+import gltfCamera from "./gltfCamera";
 
 /**
  * This is a bootstrap script for example page.
@@ -16,6 +17,7 @@ import { World } from "../ecs/index";
     ["Simple Cube", simpleCube],
     ["Many Cubes", manyCubes],
     ["Load GLTF", loadGLTF],
+    ["GLTF Camera", gltfCamera],
     ["Remove Entities", removeEntities],
     ["Add Entities", addEntity],
     ["Custom Shader", customShader],

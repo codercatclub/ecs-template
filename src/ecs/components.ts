@@ -144,8 +144,3 @@ export const AudioC: Component<AudioCData> = {
     loop: false
   },
 };
-
-export const EnvSphereC: Component<null> = {
-  type: "NeuronCore",
-  data: null,
-};

@@ -14,7 +14,10 @@ export const GLTFCameraSystem: GLTFCameraSystem = {
   init: function (world) {
     this.entities = applyQuery(world.entities, this.queries);
 
-    this.entities.forEach((ent) => {
+    // We assume there only one camera in the scene
+    if (this.entities.length > 0) {
+
+      const ent = this.entities[0];
       const { object3d } = getComponent(ent, Object3DC);
 
       const cam = object3d.getObjectByProperty(
@@ -28,6 +31,7 @@ export const GLTFCameraSystem: GLTFCameraSystem = {
 
       const renderSystem = world.getSystem<RenderSystem>(RenderSystem.type);
       renderSystem?.setCamera(cam);
-    });
+    }
+
   },
 };
